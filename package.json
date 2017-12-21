@@ -1,0 +1,41 @@
+{
+  "name": "@emonkak/commentary",
+  "version": "1.0.0",
+  "description": "A overlaid chat renderer on virtual screen like Niconico Douga",
+  "author": "Shota Nozaki",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emonkak/js-commentary.git"
+  },
+  "scripts": {
+    "build": "npm-run-all build:'*'",
+    "build:webpack": "webpack",
+    "build:lib": "tsc --declaration",
+    "cover": "nyc npm test",
+    "lint": "tslint 'lib/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rm -f -r dist",
+    "precover": "rm -f -r .nyc_output coverage",
+    "test": "mocha --recursive --compilers ts:ts-node/register",
+    "watch": "npm-run-all watch:'*'",
+    "watch:webpack": "webpack --watch",
+    "watch:lib": "tsc --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.5.2",
+    "cash-cp": "^0.2.0",
+    "cash-rm": "^0.2.0",
+    "coveralls": "^3.0.0",
+    "mocha": "^4.0.1",
+    "npm-run-all": "^4.1.2",
+    "nyc": "^11.4.1",
+    "ts-loader": "^3.1.1",
+    "ts-node": "^4.0.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.8.1"
+  }
+}
